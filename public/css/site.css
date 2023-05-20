@@ -1,0 +1,124 @@
+:root {
+    --main-font: Arial, sans-serif;
+    --heading-font: 'Helvetica', Arial, sans-serif;
+    --paragraph-font: 'Times New Roman', serif;
+    --primary-color: #ff8c00;
+  }
+
+body{
+    margin: unset;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5{
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
+  }
+
+.main-container{
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 80%;
+}
+
+.main-container h1{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.banner {
+    background-image: url('/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .banner p {
+    font-size: 18px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2em;
+    row-gap: 4em;
+    margin: 0 auto;
+  }
+  
+  .gallery .image {
+     width: 100%;
+     height: 200px;
+  }
+  
+  .gallery .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+/*contact us */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+
+  .contact-form form {
+    width: 100%;
+  }
+  
+  .contact-form label, .contact-form input, .contact-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 2rem;
+  }
+  
+  .contact-form textarea {
+    height: 100px;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  .location-map iframe {
+    width: 100%;
+    height: 400px;
+  }
+  
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  .about{
+    margin: 0 auto;
+    width: 80%;
+  }
