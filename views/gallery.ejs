@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%- include('common/header') -%>
   </head>
   <body>
@@ -18,6 +20,13 @@
         <% }); %>
   
       </div>
+
+      <div class="fullscreen-preview">
+        <span class="prev-icon">&#10094;</span>
+        <span class="next-icon">&#10095;</span>
+        <img class="preview-image" src="" alt="">
+      </div>
+
     </div>
 
     <%- include('common/footer') -%>

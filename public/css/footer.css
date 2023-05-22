@@ -7,13 +7,12 @@ footer {
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  row-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .footer-section {
-  flex: 1 1 300px;
   margin-bottom: 20px;
 }
 

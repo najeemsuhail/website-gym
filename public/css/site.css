@@ -50,7 +50,7 @@ p {
   
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2em;
     row-gap: 4em;
     margin: 0 auto;
@@ -122,3 +122,56 @@ p {
     margin: 0 auto;
     width: 80%;
   }
+
+
+    /* CSS for fullscreen preview */
+    .fullscreen-preview {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    .fullscreen-preview img {
+      max-height: 80vh;
+      max-width: 80vw;
+    }
+    
+    /* CSS for next and previous icons */
+    .next-icon,
+    .prev-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    
+    .next-icon {
+      right: 20px;
+    }
+    
+    .prev-icon {
+      left: 20px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .main-container{
+        margin: 0 auto;
+        margin-top: 2em;
+        width: 95%;
+    }
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+   
