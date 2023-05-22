@@ -18,6 +18,13 @@ p {
     font-family: var(--paragraph-font);
   }
 
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
 .main-container{
     margin: 0 auto;
     margin-top: 2em;
@@ -50,7 +57,7 @@ p {
   
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2em;
     row-gap: 4em;
     margin: 0 auto;

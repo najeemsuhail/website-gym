@@ -28,6 +28,17 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
+app.post('/contact', (req, res) => {
+  // Access form data using req.body
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+
+  // Process the form data (e.g., send an email, store in database, etc.)
+
+  res.send('Thank you for contacting us!');
+});
+
 app.listen(3000, () => {
   console.log('Server started on port 3000');
 });

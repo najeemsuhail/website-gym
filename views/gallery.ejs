@@ -11,15 +11,16 @@
 
     <div class="main-container">
       <h1>Gallery</h1>
-      <div class="gallery">
       
-        <% gallery.forEach(function(image) { %>
+      <div class="gallery">
+        <% gallery.forEach(function(image, index) { %>
           <div class="image">
             <img src="<%= image %>" alt="Placeholder Image">
           </div>
         <% }); %>
-  
       </div>
+      
+      
 
       <div class="fullscreen-preview">
         <span class="prev-icon">&#10094;</span>
