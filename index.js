@@ -1,6 +1,11 @@
 const fs = require('fs');
 const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
@@ -28,16 +33,41 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
-app.post('/contact', (req, res) => {
-  // Access form data using req.body
+
+app.post("/contactus", (req, res) => {
+  // Get the form data
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
 
-  // Process the form data (e.g., send an email, store in database, etc.)
+  // Send an email to the recipient
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "suhail.najeem@gmail.com",
+      pass: "",
+    },
+  });
 
-  res.send('Thank you for contacting us!');
+  transporter.sendMail({
+    from: "suhail.najeem@gmail.com",
+    to: "suhail.najeem@gmail.com",
+    subject: "Contact Form Submission",
+    text: `
+      From: ${name}
+      Email: ${email}
+      Message: ${message}
+    `,
+  });
+
+  // Send a success message back to the client
+  res.send("Your message has been sent!");
 });
+
+
+
 
 app.listen(3000, () => {
   console.log('Server started on port 3000');
