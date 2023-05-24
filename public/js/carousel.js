@@ -10,6 +10,7 @@ $(document).ready(function(){
       el: '.swiper-pagination',
       clickable: true,
     },
+    followFinger: false,
     autoplay: {
       delay: 3000, // Delay between slide transitions (in milliseconds)
       disableOnInteraction: false, // Enable autoplay even when user interacts with the carousel
