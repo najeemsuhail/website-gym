@@ -1,5 +1,5 @@
 :root {
-    --main-font: Arial, sans-serif;
+    --main-font: 'Montserrat', sans-serif;
     --heading-font: 'Helvetica', Arial, sans-serif;
     --paragraph-font: 'Times New Roman', serif;
     --primary-color: #ff8c00;
@@ -41,7 +41,7 @@ p {
 }
 .banner {
     background-image: url('/images/banner.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     height: 300px;
     text-align: center;
